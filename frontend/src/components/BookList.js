@@ -1,4 +1,17 @@
 import React from 'react'
+import { gql } from '@apollo/client'
+const getBooksQuery = gql`{
+    books{
+    id
+    name
+    author {
+    id
+    }
+}
+}`;
+
+console.log(getBooksQuery);
+
 
 export default function BookList() {
     return (
